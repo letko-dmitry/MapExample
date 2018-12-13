@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="thr-fa-uub">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Is0-i3-8gb">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="thr-fa-uub" customClass="MapViewController" customModule="MapExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Y8P-bt-V7R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67U-8M-bBt" userLabel="Contet View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9d-Oe-1P4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="thr-fa-uub" id="8r8-k0-SFE"/>
+                                        </connections>
+                                    </mapView>
+                                    <view autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtT-UM-Wd2" userLabel="Overlay View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gw5-Gy-aMU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </view>
+                                    <view autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGH-Ah-Rce" userLabel="Annotations View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="i9d-Oe-1P4" firstAttribute="leading" secondItem="67U-8M-bBt" secondAttribute="leading" id="8xd-5R-Ujx"/>
+                                    <constraint firstItem="i9d-Oe-1P4" firstAttribute="top" secondItem="67U-8M-bBt" secondAttribute="top" id="9fQ-z9-R7a"/>
+                                    <constraint firstItem="wGH-Ah-Rce" firstAttribute="top" secondItem="67U-8M-bBt" secondAttribute="top" id="Alg-ez-eLt"/>
+                                    <constraint firstItem="XtT-UM-Wd2" firstAttribute="leading" secondItem="67U-8M-bBt" secondAttribute="leading" id="N99-Uh-nDU"/>
+                                    <constraint firstItem="i9d-Oe-1P4" firstAttribute="trailing" secondItem="67U-8M-bBt" secondAttribute="trailing" id="TNV-2M-jFg"/>
+                                    <constraint firstItem="i9d-Oe-1P4" firstAttribute="bottom" secondItem="67U-8M-bBt" secondAttribute="bottom" id="aMq-Rc-9A5"/>
+                                    <constraint firstItem="wGH-Ah-Rce" firstAttribute="leading" secondItem="67U-8M-bBt" secondAttribute="leading" id="e3G-br-tca"/>
+                                    <constraint firstItem="Gw5-Gy-aMU" firstAttribute="top" secondItem="67U-8M-bBt" secondAttribute="top" id="epI-Lt-cAW"/>
+                                    <constraint firstItem="wGH-Ah-Rce" firstAttribute="bottom" secondItem="67U-8M-bBt" secondAttribute="bottom" id="gKf-Cm-tqc"/>
+                                    <constraint firstItem="Gw5-Gy-aMU" firstAttribute="bottom" secondItem="67U-8M-bBt" secondAttribute="bottom" id="gsz-9N-bQD"/>
+                                    <constraint firstItem="Gw5-Gy-aMU" firstAttribute="leading" secondItem="67U-8M-bBt" secondAttribute="leading" id="lZa-q6-pto"/>
+                                    <constraint firstItem="XtT-UM-Wd2" firstAttribute="trailing" secondItem="67U-8M-bBt" secondAttribute="trailing" id="s8x-q1-9ak"/>
+                                    <constraint firstItem="XtT-UM-Wd2" firstAttribute="top" secondItem="67U-8M-bBt" secondAttribute="top" id="uli-Q9-K8i"/>
+                                    <constraint firstItem="wGH-Ah-Rce" firstAttribute="trailing" secondItem="67U-8M-bBt" secondAttribute="trailing" id="xNJ-Ol-3OV"/>
+                                    <constraint firstItem="Gw5-Gy-aMU" firstAttribute="trailing" secondItem="67U-8M-bBt" secondAttribute="trailing" id="zF7-zE-hSv"/>
+                                    <constraint firstItem="XtT-UM-Wd2" firstAttribute="bottom" secondItem="67U-8M-bBt" secondAttribute="bottom" id="zb7-Os-Hex"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="S1Z-uj-spO" appends="YES" id="r15-if-eyN"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="67U-8M-bBt" firstAttribute="top" secondItem="Y8P-bt-V7R" secondAttribute="top" id="0qH-pI-vUJ"/>
+                            <constraint firstItem="67U-8M-bBt" firstAttribute="bottom" secondItem="Y8P-bt-V7R" secondAttribute="bottom" id="fLo-k8-J8F"/>
+                            <constraint firstItem="67U-8M-bBt" firstAttribute="trailing" secondItem="Y8P-bt-V7R" secondAttribute="trailing" id="lNj-hb-h7Z"/>
+                            <constraint firstItem="67U-8M-bBt" firstAttribute="leading" secondItem="Y8P-bt-V7R" secondAttribute="leading" id="yrs-W8-Po4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mwW-co-ZrN"/>
+                    </view>
+                    <connections>
+                        <outlet property="annotationsView" destination="wGH-Ah-Rce" id="MCt-OW-isu"/>
+                        <outlet property="contentView" destination="67U-8M-bBt" id="3Yk-Pq-xeC"/>
+                        <outlet property="decorationsView" destination="Gw5-Gy-aMU" id="fG7-Wn-U4f"/>
+                        <outlet property="mapView" destination="i9d-Oe-1P4" id="Oyr-ce-8gL"/>
+                        <outlet property="overlayView" destination="XtT-UM-Wd2" id="kdp-az-aGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5z-cg-y3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="S1Z-uj-spO">
+                    <connections>
+                        <action selector="handleTapGestureOnContentView:" destination="thr-fa-uub" id="RVa-jn-E4P"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-687" y="-96"/>
+        </scene>
+    </scenes>
+</document>
